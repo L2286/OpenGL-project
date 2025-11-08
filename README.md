@@ -14,3 +14,6 @@
 - Windows (поскольку используется windows.h / WinMain).
 - MinGW-w64 / MSYS2 (gcc), dev-файлы OpenGL (opengl32, glu32) доступны для линковки.
 - Папка `stb-master` рядом с исходниками (используются заголовки stb).
+
+v1:
+- ![test_menu](imgs/test-menu.png)
