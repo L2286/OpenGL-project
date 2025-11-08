@@ -1,0 +1,2 @@
+-> v1: 
+gcc -o game.exe main.c include/menu.c -I. -Istb-master -lopengl32 -lglu32 -lgdi32 -std=c99 -Wall
