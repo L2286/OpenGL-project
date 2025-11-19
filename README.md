@@ -17,3 +17,7 @@
 
 v1:
 - ![test_menu](imgs/test-menu.png)
+
+v2:
+- ![main_menu](imgs/main-menu.png)
+- ![game](imgs/game.png)
