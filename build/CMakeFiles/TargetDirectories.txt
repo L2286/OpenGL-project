@@ -1,0 +1,3 @@
+C:/Users/mixa2/OpenGL-project/build/CMakeFiles/first_prj.dir
+C:/Users/mixa2/OpenGL-project/build/CMakeFiles/edit_cache.dir
+C:/Users/mixa2/OpenGL-project/build/CMakeFiles/rebuild_cache.dir

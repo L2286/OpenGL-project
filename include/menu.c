@@ -60,7 +60,7 @@ void _renderBtn(int btnIdx) {
     if (currentBtn.isDone)
         glColor3f(0.81, 0.07, 0.25);
     else if (currentBtn.isHover)
-        glColor3f(0.91, 0.66, 0);
+        glColor3f(0.82f, 0.67f, 0.85f);
     else
         glColor3f(0.6, 0.6, 0.6);
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
@@ -73,7 +73,7 @@ void _renderBtn(int btnIdx) {
 
     glPushMatrix();
     // -
-    glColor3f(0, 0, 0);
+    glColor3f(1, 1, 1);
     glTranslatef(currentBtn.textPosX, currentBtn.textPosY, 0);
     glScalef(currentBtn.textScale, currentBtn.textScale, 1);
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -81,18 +81,22 @@ void _renderBtn(int btnIdx) {
     glVertexPointer(2, GL_FLOAT, 16, currentBtn.buffer);
     glDrawArrays(GL_QUADS, 0, currentBtn.numQuads * 4);
     // --
+    //glDisableClientState(GL_VERTEX_ARRAY);
+    glColor3f(1.0f, 1.0f, 1.0f);
     // -
     glPopMatrix();
 
     if (currentBtn.isDown & !currentBtn.isDone) {
-        currentBtn.function(currentBtn.name);
+        currentBtn.function();
         btn[btnIdx].isDone = 1;
     }
 }
 
 void showMenu() {
+    glPushMatrix();
     for (int i = 0; i < btnCount; i++)
         _renderBtn(i);
+    glPopMatrix();
 }
 
 char _isCoordInButton(int buttonIdx, float x, float y) {

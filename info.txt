@@ -1,0 +1,6 @@
+cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --config Debug -- -j
+
+
+1) Проект на OpenGL
+2) Собирается Проект на msys64 https://www.msys2.org/
